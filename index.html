@@ -100,7 +100,7 @@
         height: 100vh;
         bottom: 0;
         left: 0;
-        padding: 10px;
+        /* padding: 10px; */
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -136,6 +136,20 @@
         border-bottom-left-radius: 36px;
         padding: 5px 30px;
     }
+    
+    .bg-doa {
+        /* background: #010101; */
+        background-image: url('asset/doaa.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    .bg-wedding {
+        /* background: #010101; */
+        background-image: url('asset/weeding.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
 </style>
 
 <body>
@@ -153,16 +167,20 @@
                                     <div style="border-bottom: 3px solid  black; width:70%; margin:0 auto;" class="mb-2 mt-4">
                                         <h5><b id="to"></b></h5>
                                     </div>
-                                    <span class="mt-1" style="font-size: 0.8em; font-weight: bold;">Kami Mengundang Anda Untuk Hadir di Acara Pernikahan Kami</span>
-                                    <button class="mt-3 btn-open">
-                                        <span><i aria-hidden="true" class="fa fa-envelope" style="border-radius:20px;background:#424751; color:white; padding:10px;"></i> </span>
-                                        <span>Buka Undangan</span>
-                                    </button>
+                                    <span class="mt-1" style="font-size: 0.8em;  ">Kami Mengundang Anda Untuk Hadir di Acara Pernikahan Kami</span>
+                                    <div>
+                                        <button class="mt-3 btn-open">
+                                            <span><i aria-hidden="true" class="fa fa-envelope" style="border-radius:20px;background:#424751; color:white; padding:10px;"></i> </span>
+                                            <span>Buka Undangan</span>
+                                        </button>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="content-inscroll">
-                            <img class="img-doa" src="asset/doa.png" alt="">
+                        <div class="content-inscroll bg-doa">
+                        </div>
+                        <div class="content-inscroll bg-wedding">
                         </div>
                     </div>
                 </div>
