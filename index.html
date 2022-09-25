@@ -16,7 +16,7 @@
 </head>
 
 <style>
-    body {
+body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -150,6 +150,63 @@
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
+    
+    .float-menu>.menu img {
+        height: 3.5rem !important;
+        width: 3.5rem !important;
+    }
+    
+    .flower-top {
+        background-image: url('asset/bunga-atas-rotate1.png');
+        background-repeat: no-repeat;
+        background-size: 75% 85%;
+        background-position: right;
+        height: 47vh;
+        top: -25px;
+        position: relative;
+        left: 23px;
+        width: 100%;
+    }
+    
+    .flower-bottom {
+        background-image: url('asset/bunga-bawah-rotate1.png');
+        background-repeat: no-repeat;
+        background-size: 75% 85%;
+        background-position: left;
+        height: 100% !important;
+        top: 71px;
+        position: relative;
+        width: 100%;
+    }
+    
+    .flowers-weding {
+        background-image: url('asset/bunga-bawah-rotate1.png'), url('asset/bunga-atas-rotate1.png');
+        background-position: right bottom, left top;
+        background-position-x: right, left;
+        background-position-y: bottom, top;
+        background-size: 100% 50%, 75% 36%;
+        background-repeat: no-repeat, no-repeat;
+        /* width: 682px; */
+        max-width: 32rem;
+    }
+    
+    .style-flower {
+        position: relative;
+        width: 31rem;
+        z-index: 50;
+        margin: 0px auto;
+        top: -320px;
+        padding: 20px 40px;
+    }
+    
+    .bg-kado {
+        max-height: 100px !important;
+    }
+    
+    .content-inscroll>.row {
+        position: inherit;
+    }
+}
 </style>
 
 <body>
@@ -158,7 +215,7 @@
             <div class="content main-content">
                 <div class="content-body">
                     <div class="scrollBbar">
-                        <div class="content-inscroll">
+                        <div class="content-inscroll" id="menu">
                             <img class="img-title" src="asset/title.png" alt="">
                             <div class="row">
                                 <div class="col-md-12 text-center">
@@ -173,28 +230,62 @@
                                             <span><i aria-hidden="true" class="fa fa-envelope" style="border-radius:20px;background:#424751; color:white; padding:10px;"></i> </span>
                                             <span>Buka Undangan</span>
                                         </button>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="content-inscroll bg-doa">
+                        <div class="content-inscroll bg-doa" id="doa">
                         </div>
-                        <div class="content-inscroll bg-wedding">
+                        <div class="content-inscroll bg-wedding" id="weeding">
+                        </div>
+                        <div class="content-inscroll" id="kado">
+                            <div class="flower-top"></div>
+                            <div class="flower-bottom" style="height: 100%;">
+                                <div class="style-flower">
+                                    <!-- <div style="background-color: white; height: 300px; width:100px;"></div> -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h1> Wedding Gift </h1>
+                                        </div>
+                                        <div class="col-md-12" style="width:95%">Kehadiran Anda lebih penting bagi kami dari apapun. Namun jika Anda ingin memberi kami hadiah, kami menyediakan berupa kado dan amplop digital.</div>
+                                        <div class="col-md-12 mt-4" style="text-align:center !important; margin-left:-30px;">
+                                            <h6>KIRIM KADO UNTUK RANI &amp; USEP</h6>
+                                            <img src="asset/Kado.png" width="50px">
+                                            <div>
+                                                <a href="#" style="text-decoration: none; color: #010101;"> <img src="asset/Salin.png" width="20px">&nbsp;<span>Salin Alamat</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mt-4" style="/*! text-align:center !important; */ margin-left:0px;">
+                                            <img src="asset/Mandiri Usep Edited.png" width="200px">
+                                            <div>
+                                                <a href="#" style="text-decoration: none; color: #010101;"> <img src="asset/Salin.png" width="20px">&nbsp;<span>Salin Nomer Rekening</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mt-4" style="text-align:center !important; left: 100px">
+                                            <img src="asset/BNI Rani Edited.png" width="200px">
+                                            <div>
+                                                <a href="#" style="text-decoration: none; color: #010101;"> <img src="asset/Salin.png" width="20px">&nbsp;<span>Salin Nomer Rekening</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="float-menu">
-                    <a href="/about-us" class="menu">
+                    <a href="#menu" class="menu">
+                        <!-- <i class="fa fa-solid fa-house fa-2x"></i> -->
+                        <img src="asset/Icon/2_20220925_180331_0000.png">
+                    </a>
+                    <a href="#doa" class="menu">
                         <i class="fa fa-solid fa-house fa-2x"></i>
                     </a>
-                    <a href="/about-us" class="menu">
+                    <a href="#weeding" class="menu">
                         <i class="fa fa-solid fa-house fa-2x"></i>
                     </a>
-                    <a href="/about-us" class="menu">
-                        <i class="fa fa-solid fa-house fa-2x"></i>
-                    </a>
-                    <a href="/about-us" class="menu">
+                    <a href="#kado" class="menu">
                         <i class="fa fa-solid fa-house fa-2x"></i>
                     </a>
                     <a href="/about-us" class="menu">
