@@ -131,6 +131,9 @@
                                 <div class="col-md-12 text-center">
                                     <h4><b> Kepada</b></h4>
                                     <h4><b> Bapak/Ibu/Saudara</b> </h4>
+                                    <div style="border-bottom: 3px solid  black; width:70%; margin:0 auto">
+                                        <b><span id="to"></span></b>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -169,5 +172,13 @@
         </main>
     </section>
 </body>
+<script>
+    var to = location.search.split('untuk=')[1];
+    // console.log(location.search)
+    to = decodeURI(to);
+    // console.log(myParam);
+    const untuk = document.getElementById("to");
+    untuk.innerHTML = to;
+</script>
 
 </html>
