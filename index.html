@@ -239,8 +239,8 @@
     @media screen and (max-width: 600px) {
 
         .float-menu { 
-            //max-width: 26rem; 
-            max-width: 24.7rem;
+            max-width: 26rem; 
+            //max-width: 24.7rem;
             margin: 8px;
         }
         
@@ -264,7 +264,7 @@
         bottom:0px;
         position:fixed;
         padding:20px;
-        min-height: 100vh;
+        height:100%;
         max-width: 32rem;
         --tw-bg-opacity: 1;
         background-image: url('asset/img/bg1.jpg');
@@ -274,7 +274,8 @@
         transition: opacity 1s ease-out;
         opacity: 0;
         height: 0;
-        overflow: hidden;
+        //overflow: hidden;
+        position:hidden;
     }
 </style>
 
@@ -283,30 +284,32 @@
         <main class="content-display">
             <div class="content main-content">
                 <div class="content-body">
-                <div class="open-mail">
-                    <div class="scrollBbar">
-                            <div class="content-inscroll" id="menu">
-                                    <img class="img-title" src="asset/img/title.png?tr=w-1,h-1:w-400,h-300" load="lazy" alt="">
-                                    <div class="row">
-                                        <div class="col-md-12 text-center">
-                                            <h4><b> Kepada</b></h4>
-                                            <h4><b> Bapak/Ibu/Saudara/i</b> </h4>
-                                            <div style="border-bottom: 3px solid  black; width:70%; margin:0 auto;" class="mb-2 mt-4">
-                                                <h3><b id="to"></b></h3>
-                                            </div>
-                                            <span class="mt-1">Kami Mengundang Anda Untuk Hadir di Acara Pernikahan Kami</span>
-                                            <div>
-                                                <button class="mt-3 btn-open" id="buka-undangan">
-                                                    <span><i aria-hidden="true" class="fa fa-envelope" style="border-radius:20px;background:#424751; color:white; padding:10px;"></i> </span>
-                                                    <span>Buka Undangan</span>
-                                                </button>
+                    <div class="cc">
+                        <div class="open-mail">
+                            <div class="scrollBbar">
+                                <div class="content-inscroll" id="menu">
+                                        <img class="img-title" src="asset/img/title.png?tr=w-1,h-1:w-400,h-300" load="lazy" alt="">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <h4><b> Kepada</b></h4>
+                                                <h4><b> Bapak/Ibu/Saudara/i</b> </h4>
+                                                <div style="border-bottom: 3px solid  black; width:70%; margin:0 auto;" class="mb-2 mt-4">
+                                                    <h3><b id="to"></b></h3>
+                                                </div>
+                                                <span class="mt-1">Kami Mengundang Anda Untuk Hadir di Acara Pernikahan Kami</span>
+                                                <div>
+                                                    <button class="mt-3 btn-open" id="buka-undangan">
+                                                        <span><i aria-hidden="true" class="fa fa-envelope" style="border-radius:20px;background:#424751; color:white; padding:10px;"></i> </span>
+                                                        <span>Buka Undangan</span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                     <div class="scrollBbar">
                         <div class="content-inscroll" id="menu">
                             <img class="img-title" src="asset/img/title.png?tr=w-1,h-1:w-400,h-300" load="lazy" alt="">
@@ -543,7 +546,11 @@ $(function() {
     });
     $('#buka-undangan').click(function(e){
         e.preventDefault();
-         $(this).parent().closest('.open-mail').addClass('hidden-mail'); 
+         $(this).parent().closest('.cc').addClass('hidden-mail'); 
+         setTimeout(function myStopFunction() {
+                $('.open-mail').remove(); 
+                clearTimeout(myTimeout);
+        }, 500);  
     });
 });
     var to = location.search.split('untuk=')[1];
