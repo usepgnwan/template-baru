@@ -446,19 +446,19 @@
                                         <h6>KIRIM KADO UNTUK RANI &amp; USEP</h6>
                                         <img src="asset/img/Kado.png?tr=w-1,h-1:w-400,h-300" loading="lazy" width="50px">
                                         <div>
-                                            <a href="#" style="text-decoration: none; color: #010101;"> <img src="asset/img/Salin.png?tr=w-1,h-1:w-400,h-300" loading="lazy" width="20px">&nbsp;<span>Salin Alamat</span></a>
+                                            <a href="javascript:void(0);" style="text-decoration: none; color: #010101;" data-text="Perumahan Cipatat Elok Blok T NO 1B rt/rw 001/021 ds.ciptaharja kec.cipatat kab.bandung barat" id="salin_alamat"> <img src="asset/img/Salin.png?tr=w-1,h-1:w-400,h-300" loading="lazy" width="20px">&nbsp;<span>Salin Alamat</span></a>
                                         </div>
                                     </div>
                                     <div class="col-md-12 mt-4"  data-aos="fade-up" data-aos-delay="400">
                                         <img src="asset/img/Mandiri Usep Edited.png" loading="lazy" width="200px">
                                         <div>
-                                            <a href="#" style="text-decoration: none; color: #010101;"> <img src="asset/img/Salin.png?tr=w-1,h-1:w-400,h-300" loading="lazy" width="20px">&nbsp;<span>Salin Nomer Rekening</span></a>
+                                            <a href="javascript:void(0);" style="text-decoration: none; color: #010101;"  data-text="1320025429946" id="salin_rek1"> <img src="asset/img/Salin.png?tr=w-1,h-1:w-400,h-300" loading="lazy" width="20px">&nbsp;<span>Salin Nomer Rekening</span></a>
                                         </div>
                                     </div>
                                     <div class="col-md-12 mt-4 text-right"  data-aos="fade-up" data-aos-delay="500"> 
                                         <img src="asset/img/BNI Rani Edited.png" width="200px">
                                         <div>
-                                            <a href="#" style="text-decoration: none; color: #010101; "> <img src="asset/img/Salin.png?tr=w-1,h-1:w-400,h-300 " loading="lazy " width="20px ">&nbsp;<span>Salin Nomer Rekening</span></a>
+                                            <a href="javascript:void(0);"  data-text="0400388804" id="salin_rek2" style="text-decoration: none; color: #010101; "> <img src="asset/img/Salin.png?tr=w-1,h-1:w-400,h-300 " loading="lazy " width="20px ">&nbsp;<span>Salin Nomer Rekening</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -580,6 +580,28 @@ $(function() {
     const untuk2 = document.getElementById("to2");
     untuk.innerHTML = to;
     untuk2.innerHTML = to;
+    $('#salin_alamat').click(function(e){
+        e.preventDefault(); 
+        textcopy($(this).data('text'), 'adress');
+    });
+    $('#salin_rek1').click(function(e){
+        e.preventDefault(); 
+        textcopy($(this).data('text'), 'Usep');
+    });
+    $('#salin_rek2').click(function(e){
+        e.preventDefault(); 
+        textcopy($(this).data('text'), 'Rani');
+    });
+    function textcopy(copyText, type) {  
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText); 
+        // Alert the copied text
+        if(type =='adress'){ 
+            alert("Alamat Tersalin: " + copyText);
+        }else{
+            alert("No rekening "+ type + " Tersalin: " + copyText);            
+        }
+    }
 </script>
 
 </html>
