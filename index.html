@@ -263,16 +263,65 @@
         .scrollBbar>.content-inscroll {
             width:100%;
         }
+        .tag-in {
+            width:250px !important;
+        }
+         .mail-to{
+            min-height: 100%;
+        }
 	}
+    .mail-to{
+        position:fixed;
+        min-height: 100vh;
+         max-width: 32rem;
+        bottom:0;
+        z-index:9999;
+        background:blue;
+        width:100%;
+        background-image: url('asset/img/bg1.jpg');
+        background-color: #eaeaea;
+    }
+     .mail-to>.open-mail .img-title {
+        max-height: 100%;
+        max-width: 87%;
+        margin: 15px 24px 0px 36px;
+    } 
+    .hidden-mail{ 
+        transition: 0.5s;
+        transform: translateY(-100%);
+        position:hidden;
+    } 
 </style>
 
 <body name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=no">
     <section>
         <main class="content-display">
             <div class="content main-content">
-                <div class="content-body">
-                
+                <div class="content-body"> 
                     <div class="scrollBbar">
+                        <div class="cc">
+                            <div class="mail-to">
+                                <div class="open-mail" id="menu">
+                                    <img class="img-title" src="asset/img/title.png?tr=w-1,h-1:w-400,h-300" load="lazy" alt="">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <h4><b> Kepada</b></h4>
+                                            <h4><b> Bapak/Ibu/Saudara/i</b> </h4>
+                                            <div style="border-bottom: 3px solid  black; width:70%; margin:0 auto;" class="mb-2 mt-4">
+                                                <h5><b id="to2"></b></h5>
+                                            </div>
+                                            <span class="mt-1" style="font-size: 0.8em;">Kami Mengundang Anda Untuk Hadir di Acara Pernikahan Kami</span>
+                                            <div>
+                                                <button class="mt-3 btn-open" id="buka-undangan">
+                                                    <span><i aria-hidden="true" class="fa fa-envelope" style="border-radius:20px;background:#424751; color:white; padding:10px;"></i> </span>
+                                                    <span>Buka Undangan</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="content-inscroll" id="menu">
                             <img class="img-title" src="asset/img/title.png?tr=w-1,h-1:w-400,h-300" load="lazy" alt="">
                             <div class="row">
@@ -293,33 +342,32 @@
                             </div>
                         </div>
                         <div class="content-inscroll bg-doa" id="doa" data-aos="fade-up" data-aos-anchor-placement="top-center"></div>
-                        <div class="content-inscroll bg-wedding" id="weddingss" data-aos="fade-up" data-aos-anchor-placement="top-center"></div> 
-                        <!-- <div class="content-inscroll bg-flower-2" id="protocol">
+                        <!-- <div class="content-inscroll bg-wedding" id="weddingss" data-aos="fade-up" data-aos-anchor-placement="top-center"></div>  -->
+
+                       <div class="content-inscroll bg-flower-2" id="protocol">
                             <div class="style-flower" style="padding-top:120px !important">
-                                <div class="row"> 
-                                    <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="100">
-                                        <h2>The Wedding Of</h2>
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <h2  data-aos="fade-up" data-aos-delay="60"><b> The Wedding Of</b></h2>
                                     </div>
-                                    <div class="col-md-12 mt-3">
+                                    <div class="col-md-12 mt-2">
                                         <div class="d-flex p-1 text-center">
-                                            <div class="p-2 col-6"  data-aos="fade-right" data-aos-delay="200" style=" font-family: 'Alex Brush'; "> <h1 style="font-size: 5em !important;padding-top:25%;"> Rani </h1></div>
-                                            <div class="p-2 col-6"  data-aos="fade-left" data-aos-delay="300"><img src="asset/img/Karakter Wanita Edited.png" alt="" width="150px" loading="lazy"></div> 
-                                        </div>
-                                        <div class=" text-center mt-2"  data-aos="fade-up" data-aos-delay="400">
-                                              <h1 style="font-family: 'Alex Brush;font-size: 5em !important;"> & </h1>
-                                        </div>
-                                         <div class="d-flex p-1 text-center">
-                                            <div class="p-2 col-6"  data-aos="fade-right" data-aos-delay="500"><img src="asset/img/Karakter Pria Edited.png" alt="" width="150px" loading="lazy"></div> 
-                                            <div class="p-2 col-6"  data-aos="fade-left" data-aos-delay="600" style=" font-family: 'Alex Brush'; "> <h1 style="font-size: 5em !important;padding-top:25%;"> Usep </h1></div>
-                                        </div> 
+                                            <div class="col-6"  data-aos="fade-right" data-aos-delay="100"><h1 style="padding:30px;font-family: 'Alex Brush';font-size: 3.9em;"> Rani</h1></div>
+                                            <div class="col-6"  data-aos="fade-right" data-aos-delay="200"><img src="asset/img/Karakter Wanita Edited.png" alt="" width="150px" loading="lazy"></div> 
+                                        </div>  
+                                        <div class="d-flex p-1 ">
+                                            <div class="col-12 text-center"  data-aos="fade-right" data-aos-delay="300"><h1 style="font-family: 'Alex Brush';font-size: 3.9em;"> &</h1></div> 
+                                        </div>  
+                                       <div class="d-flex p-1 text-center">
+                                            <div class="col-6"  data-aos="fade-right" data-aos-delay="400"><img src="asset/img/Karakter Pria Edited.png" alt="" width="150px" loading="lazy"></div>
+                                            <div class="col-6"  data-aos="fade-right" data-aos-delay="500"><h1 style="padding:30px;font-family: 'Alex Brush';font-size: 3.9em;"> Usep</h1></div> 
+                                        </div>  
                                     </div>
-                                    <div class="col-md-6 tag-in" data-aos="fade-up" data-aos-delay="700"  style="text-align: left !important;">
-                                        <h6>Sabtu, 17 Agustus 2022</h6>
-                                    </div>
-                                </div>
-                                
+                                    <div class="tag-in mt-3" style="width:35vh"  data-aos="fade-up" data-aos-delay="600"> Sabtu, 17 Desember 2022 </div>
+                                </div> 
                             </div>
-                        </div> -->
+                        </div>
+
                         <div class="content-inscroll bg-flower-1" id="catatan" >
                             <div class="style-flower">
                                 <div class="row">
@@ -504,17 +552,24 @@ $(function() {
          window.addEventListener('load', AOS.refresh)
         //let $nav = $('.navbar-fixed-top');
         //$nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-
     });
 });
+    $('#buka-undangan').click(function(e){
+        e.preventDefault(); 
+        $(this).parent().closest('.mail-to').addClass('hidden-mail'); 
+        setTimeout(function myStopFunction() {
+                $('.mail-to').remove(); 
+                clearTimeout(myTimeout);
+        }, 4500);  
+    });
     var to = location.search.split('untuk=')[1];
     // console.log(location.search)
     to = decodeURI(to);
     // console.log(myParam);
-    const untuk = document.getElementById("to");
+    const untuk = document.getElementById("to");  
+    const untuk2 = document.getElementById("to2");
     untuk.innerHTML = to;
-    // AOS.init();
-   
+    untuk2.innerHTML = to;
 </script>
 
 </html>
